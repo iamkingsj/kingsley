@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LoveWorld Music</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+    </head>
+    <body style="background-color:#E69A8D">
+        <header class="header">
+            <nav class="navbar navbar-style">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href=""><img src="media/logo_copy.png" class="logo"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="micon">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="shop.html">SHOP</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                       </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>THE<br>REAL<br>SOUND</h1>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="right-col">
+                             <p> Play To Listen</p>
+                             <img src="media/play_button.png" id="icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <audio id="mySong">
+                <source src="media/Throne_Rooms_copy.mp3" type="audio/mp3">
+            </audio>
+            <!--start of javascript-->
+            <script>
+                var mySong = document.getElementById("mySong");
+                var icon = document.getElementById("icon");
+
+                icon.onclick = function(){
+                    if(mySong.paused){
+                        mySong.play();
+                        icon.src ="media/pause_button.png";
+                    }
+                    else{
+                        mySong.pause();
+                        icon.src ="media/play_button.png";
+                    }
+                }
+            </script>
+         <!--end of javascript-->
+    </body>
+</html>
